@@ -1,13 +1,13 @@
 function changeImage(screenWidth) {
     if (screenWidth > 1367) {
         document.getElementById("paralax1").src = "../img/fruits_1920.jpg";
-        document.getElementById("paralax2").src = "../img/running_1920.jpg";
+        document.getElementById("paralax2").src = "../img/salad_1920.jpg";
     } else if (screenWidth < 1367 && screenWidth > 800) {
         document.getElementById("paralax1").src = "../img/fruits_1366.jpg";
-        document.getElementById("paralax2").src = "../img/running_1366.jpg";
+        document.getElementById("paralax2").src = "../img/salad_1366.jpg";
     } else if (screenWidth < 800) {
         document.getElementById("paralax1").src = "../img/fruits_mobile.jpg";
-        document.getElementById("paralax2").src = "../img/running_mobile.jpg";
+        document.getElementById("paralax2").src = "../img/salad_mobile.jpg";
     }
 }
 
@@ -32,9 +32,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const tabs = document.querySelectorAll('.tabs');
     M.Tabs.init(tabs);
-
-    const modal = document.querySelectorAll('.modal');
-    M.Modal.init(modal);
 
     const scrollspy = document.querySelectorAll('.scrollspy');
     M.ScrollSpy.init(scrollspy);

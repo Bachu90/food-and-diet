@@ -73,10 +73,26 @@ nav {
     font-size: 1.2rem;
     text-align: justify;
     margin: 40px 0;
+
+    &.intro {
+        font-size: 1.4rem;
+        font-weight: 700;
+        text-indent: 60px;
+    }
 }
 
 #offer {
+
+    h2 {
+        font-size: 40px;
+        text-transform: uppercase;
+    }
     .intro {
+        font-size: 1.4rem;
+        font-weight: 700;
+    }
+
+    p:nth-of-type(2) {
         font-size: 1.2rem;
     }
 
@@ -223,9 +239,13 @@ nav {
 
 
 #contact {
+    h2 {
+        font-size: 40px;
+        text-transform: uppercase;
+    }
+
     p {
-        font-size: 1.2rem;
-        text-align: center;
+        font-size: 1.4rem;
     }
 }
 
@@ -256,6 +276,12 @@ footer {
 
     .modal-footer {
         text-align: center;
+    }
+}
+
+@media screen and (orientation: landscape){
+    #header {
+        background-image: url(../img/header_1366.jpg);
     }
 }
 

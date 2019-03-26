@@ -73,7 +73,23 @@ nav .nav-wrapper .sidenav-trigger i {
   margin: 40px 0;
 }
 
+#about p.intro {
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-indent: 60px;
+}
+
+#offer h2 {
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
 #offer .intro {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+#offer p:nth-of-type(2) {
   font-size: 1.2rem;
 }
 
@@ -225,9 +241,13 @@ nav .nav-wrapper .sidenav-trigger i {
   margin: 50px 0;
 }
 
+#contact h2 {
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
 #contact p {
-  font-size: 1.2rem;
-  text-align: center;
+  font-size: 1.4rem;
 }
 
 .input-field {
@@ -258,6 +278,12 @@ footer p {
 
 .modal .modal-footer {
   text-align: center;
+}
+
+@media screen and (orientation: landscape) {
+  #header {
+    background-image: url(../img/header_1366.jpg);
+  }
 }
 
 @media screen and (min-width: 800px) and (orientation: landscape) {
