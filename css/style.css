@@ -211,6 +211,16 @@ nav .nav-wrapper .sidenav-trigger i {
   text-align: center;
 }
 
+#offer .offer-desktop .ask-more {
+  display: block;
+  max-width: 250px;
+  padding: 7px 0;
+  margin: 30px auto 0 auto;
+  background-color: #424242;
+  color: white;
+  text-align: center;
+}
+
 .collapsible {
   margin: 50px 0;
 }
