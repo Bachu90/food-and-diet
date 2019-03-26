@@ -116,8 +116,13 @@ nav {
 
             .tab {
                 z-index: 2;
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 a {
                     color: #000;
+                    font-weight: 700;
+
                     &.active {
                         color: white;
                     }
@@ -128,6 +133,46 @@ nav {
                 height: 100%;
                 z-index: -1;
                 background-color: #424242;
+            }
+        }
+
+        #business {
+            margin: 50px 0;
+            
+            div {
+                display: flex;
+
+                i {
+                    font-size: 150px;
+                    opacity: .8;
+                    text-align: left;
+                }
+    
+                ul.offer{
+                    list-style-type: disc;
+    
+                    li {
+                        display: list-item;
+                        font-size: 1.2rem;
+                        margin: 20px 0;
+                        padding-left: 20px;
+                    }
+                }
+            }
+        }
+
+        #education {
+            text-align: center;
+            
+            i {
+                display: block;
+                font-size: 150px;
+                opacity: .8;
+            }
+
+            p {
+                font-size: 1.2rem;
+                margin: 30px auto;
             }
         }
 

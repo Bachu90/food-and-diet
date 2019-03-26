@@ -114,10 +114,20 @@ nav .nav-wrapper .sidenav-trigger i {
 
 #offer .offer-desktop .tabs .tab {
   z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #offer .offer-desktop .tabs .tab a {
   color: #000;
+  font-weight: 700;
 }
 
 #offer .offer-desktop .tabs .tab a.active {
@@ -128,6 +138,48 @@ nav .nav-wrapper .sidenav-trigger i {
   height: 100%;
   z-index: -1;
   background-color: #424242;
+}
+
+#offer .offer-desktop #business {
+  margin: 50px 0;
+}
+
+#offer .offer-desktop #business div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#offer .offer-desktop #business div i {
+  font-size: 150px;
+  opacity: .8;
+  text-align: left;
+}
+
+#offer .offer-desktop #business div ul.offer {
+  list-style-type: disc;
+}
+
+#offer .offer-desktop #business div ul.offer li {
+  display: list-item;
+  font-size: 1.2rem;
+  margin: 20px 0;
+  padding-left: 20px;
+}
+
+#offer .offer-desktop #education {
+  text-align: center;
+}
+
+#offer .offer-desktop #education i {
+  display: block;
+  font-size: 150px;
+  opacity: .8;
+}
+
+#offer .offer-desktop #education p {
+  font-size: 1.2rem;
+  margin: 30px auto;
 }
 
 #offer .offer-desktop ul.offer li {
