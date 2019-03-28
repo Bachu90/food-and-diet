@@ -44,7 +44,7 @@ nav {
 
 #header {
     height: 100vh;
-    background-image: url(../img/header_mobile.jpg);
+    background-image: url(../img/header_portrait_360.jpg);
     background-size: cover;
     background-position: center;
 
@@ -193,12 +193,16 @@ nav {
         }
 
         ul.offer li {
-            display: flex;
 
             i {
                 font-size: 100px;
                 opacity: .8;    
                 
+            }
+
+            img {
+                height: 100px;
+                opacity: .7;
             }
 
             .heading {
@@ -281,14 +285,23 @@ footer {
 
 @media screen and (orientation: landscape){
     #header {
-        background-image: url(../img/header_1366.jpg);
+        background-image: url(../img/header_landscape_1366.jpg);
     }
 }
 
-@media screen and (min-width: 800px) and (orientation: landscape) {
+@media screen and (min-width: 576px) and (orientation: portrait){
     #header {
-        background-image: url(../img/header_1366.jpg);
+        background-image: url(../img/header_portrait_1024.jpg);
 
+        h1{
+            font-size: 80px;
+        }
+        
+    }
+}
+
+@media screen and (min-width: 800px) {
+    #header {
         h1 {
             font-size: 100px;
         }
@@ -312,8 +325,8 @@ footer {
     
 }
 
-@media screen and (min-width: 1367px){
+@media screen and (min-width: 1367px) and (orientation: landscape){
     #header {
-        background-image: url(../img/header_1920.jpg)
+        background-image: url(../img/header_landscape_1920.jpg)
     }
 }

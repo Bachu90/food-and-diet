@@ -42,7 +42,7 @@ nav .nav-wrapper .sidenav-trigger i {
 
 #header {
   height: 100vh;
-  background-image: url(../img/header_mobile.jpg);
+  background-image: url(../img/header_portrait_360.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -198,15 +198,14 @@ nav .nav-wrapper .sidenav-trigger i {
   margin: 30px auto;
 }
 
-#offer .offer-desktop ul.offer li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 #offer .offer-desktop ul.offer li i {
   font-size: 100px;
   opacity: .8;
+}
+
+#offer .offer-desktop ul.offer li img {
+  height: 100px;
+  opacity: .7;
 }
 
 #offer .offer-desktop ul.offer li .heading {
@@ -282,14 +281,20 @@ footer p {
 
 @media screen and (orientation: landscape) {
   #header {
-    background-image: url(../img/header_1366.jpg);
+    background-image: url(../img/header_landscape_1366.jpg);
   }
 }
 
-@media screen and (min-width: 800px) and (orientation: landscape) {
+@media screen and (min-width: 576px) and (orientation: portrait) {
   #header {
-    background-image: url(../img/header_1366.jpg);
+    background-image: url(../img/header_portrait_1024.jpg);
   }
+  #header h1 {
+    font-size: 80px;
+  }
+}
+
+@media screen and (min-width: 800px) {
   #header h1 {
     font-size: 100px;
   }
@@ -305,9 +310,9 @@ footer p {
   }
 }
 
-@media screen and (min-width: 1367px) {
+@media screen and (min-width: 1367px) and (orientation: landscape) {
   #header {
-    background-image: url(../img/header_1920.jpg);
+    background-image: url(../img/header_landscape_1920.jpg);
   }
 }
 /*# sourceMappingURL=style.css.map */
