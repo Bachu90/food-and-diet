@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin-ext");
 @import url("https://fonts.googleapis.com/css?family=Lilita+One");
 html {
@@ -270,23 +269,6 @@ nav.hidden {
 
 #contact #contact-form.hidden {
   opacity: 0.4;
-}
-
-#contact #contact-form.hidden::after {
-  content: 'Wysyłanie wiadomości';
-  display: block;
-  width: 100%;
-  height: 50px;
-  position: absolute;
-  z-index: 3;
-  opacity: 1;
-  top: 50%;
-  left: 0;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  font-size: 24px;
-  color: #333;
-  text-align: center;
 }
 
 .input-field {

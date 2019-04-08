@@ -50,6 +50,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function sendEmail(e) {
         e.preventDefault();
+        formAlert.className = '';
+        formAlert.innerHTML = 'Wysyłanie wiadomości...';
 
         const data = {
             "first_name": form['first_name'].value,
@@ -63,8 +65,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         console.log(data);
-
-        form.reset()
 
         fetch("https://food-and-diet.pl/email", {
             method: "POST", // *GET, POST, PUT, DELETE, etc.
@@ -82,20 +82,21 @@ document.addEventListener('DOMContentLoaded', function () {
             if (response.ok && response.status == 200) {
                 console.log("Wysłane!")
                 setTimeout(() => {
-                    formAlert.classList.add('success');
+                    formAlert.className = 'success';
                     formAlert.innerHTML = "Wiadomość została wysłana";
                 }, 1000)  
             }
         }).catch(err => {
             console.log(err.message)
             setTimeout(() => {
-                formAlert.classList.add('fail');
+                formAlert.className = 'fail';
                 formAlert.innerHTML = "Błąd! Wiadomość nie została wysłana";
             }, 1000)
         }).finally(()=>{
             if(form.classList.contains('hidden')){
                 setTimeout(()=> {
                     form.classList.remove('hidden');
+                    form.reset()
                 }, 1000)
             }
         })
