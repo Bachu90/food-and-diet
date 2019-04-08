@@ -315,6 +315,14 @@ footer {
         a {
             color: #9e9e9e;
 
+            &::before {
+                content: "<";
+            }
+
+            &::after {
+                content: " />"
+            }
+
             &:hover {
                 color: #039be5;
             }

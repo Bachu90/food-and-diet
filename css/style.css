@@ -304,6 +304,14 @@ footer p a {
   color: #9e9e9e;
 }
 
+footer p a::before {
+  content: "<";
+}
+
+footer p a::after {
+  content: " />";
+}
+
 footer p a:hover {
   color: #039be5;
 }
