@@ -9,6 +9,8 @@ html {
 nav {
     position: fixed;
     z-index: 9;
+    transform: translateY(0);
+    transition: transform .6s;
 
     ul a {
         font-size: 1.6rem;
@@ -20,6 +22,10 @@ nav {
         font-weight: 600;
         font-size: 36px;
         text-shadow: 1px 1px #000;
+    }
+
+    &.hidden {
+        transform: translateY(-100%);
     }
 }
  
@@ -251,10 +257,51 @@ nav {
     p {
         font-size: 1.4rem;
     }
+
+    #contact-form {
+        opacity: 1;
+        transition: opacity .6s;
+        position: relative;
+
+        &.hidden {
+            opacity: 0.4;
+        }
+
+        &.hidden::after {
+            content: 'Wysyłanie wiadomości';
+            display: block;
+            width: 100%;
+            height: 50px;
+            position: absolute;
+            z-index: 3;
+            opacity: 1;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            font-size: 24px;
+            color: #333;
+            text-align: center;
+        }
+    }
 }
 
 .input-field {
     margin: 20px 0;
+}
+
+div#form-alert {
+    margin-top: 30px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+
+    &.success {
+        color: #4caf50;
+    }
+
+    &.fail {
+        color: #e65100;
+    }
 }
 
 footer {
@@ -264,6 +311,14 @@ footer {
     p {
         width: 100%;
         text-align: center;
+
+        a {
+            color: #9e9e9e;
+
+            &:hover {
+                color: #039be5;
+            }
+        }
     }
 }
 

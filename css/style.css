@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin-ext");
 @import url("https://fonts.googleapis.com/css?family=Lilita+One");
 html {
@@ -8,6 +9,12 @@ html {
 nav {
   position: fixed;
   z-index: 9;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: -webkit-transform .6s;
+  transition: -webkit-transform .6s;
+  transition: transform .6s;
+  transition: transform .6s, -webkit-transform .6s;
 }
 
 nav ul a {
@@ -20,6 +27,11 @@ nav .nav-wrapper .sidenav-trigger i {
   font-weight: 600;
   font-size: 36px;
   text-shadow: 1px 1px #000;
+}
+
+nav.hidden {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
 }
 
 .sidenav {
@@ -249,8 +261,51 @@ nav .nav-wrapper .sidenav-trigger i {
   font-size: 1.4rem;
 }
 
+#contact #contact-form {
+  opacity: 1;
+  -webkit-transition: opacity .6s;
+  transition: opacity .6s;
+  position: relative;
+}
+
+#contact #contact-form.hidden {
+  opacity: 0.4;
+}
+
+#contact #contact-form.hidden::after {
+  content: 'Wysyłanie wiadomości';
+  display: block;
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  z-index: 3;
+  opacity: 1;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+}
+
 .input-field {
   margin: 20px 0;
+}
+
+div#form-alert {
+  margin-top: 30px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+}
+
+div#form-alert.success {
+  color: #4caf50;
+}
+
+div#form-alert.fail {
+  color: #e65100;
 }
 
 footer {
@@ -261,6 +316,14 @@ footer {
 footer p {
   width: 100%;
   text-align: center;
+}
+
+footer p a {
+  color: #9e9e9e;
+}
+
+footer p a:hover {
+  color: #039be5;
 }
 
 .modal {

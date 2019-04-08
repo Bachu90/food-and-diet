@@ -13,6 +13,24 @@ function changeImage(screenWidth) {
 
 document.addEventListener('DOMContentLoaded', function () {
 
+    /* Navbar switch */
+
+    let navbar = document.querySelector('nav');
+    let windowPosY = window.scrollY;
+    
+    function navbarSwitch() {
+        if(windowPosY >= 100){
+            if((window.scrollY > windowPosY) && !navbar.classList.contains('hidden')){
+                navbar.classList.add('hidden');  
+            }else if((window.scrollY < windowPosY) && navbar.classList.contains('hidden')){
+                navbar.classList.remove('hidden');
+            }
+        }
+        windowPosY = window.scrollY;
+    }
+
+    window.addEventListener('scroll', navbarSwitch);
+
     /* Change Images */
 
     let screenWidth = window.outerHeight;
@@ -26,6 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
     /* Sending email */
 
     const form = document.getElementById("contact-form");
+    const formAlert = document.getElementById("form-alert");
 
 
 
@@ -38,6 +57,10 @@ document.addEventListener('DOMContentLoaded', function () {
             "subject": form['subject'].value,
             "message": form['message'].value
         };
+
+        if(!form.classList.contains('hidden')){
+            form.classList.add('hidden');
+        }
 
         console.log(data);
 
@@ -58,11 +81,23 @@ document.addEventListener('DOMContentLoaded', function () {
         }).then(response => {
             if (response.ok && response.status == 200) {
                 console.log("Wysłane!")
-            } else {
-                console.log("Błąd!")
+                setTimeout(() => {
+                    formAlert.classList.add('success');
+                    formAlert.innerHTML = "Wiadomość została wysłana";
+                }, 1000)  
             }
         }).catch(err => {
             console.log(err.message)
+            setTimeout(() => {
+                formAlert.classList.add('fail');
+                formAlert.innerHTML = "Błąd! Wiadomość nie została wysłana";
+            }, 1000)
+        }).finally(()=>{
+            if(form.classList.contains('hidden')){
+                setTimeout(()=> {
+                    form.classList.remove('hidden');
+                }, 1000)
+            }
         })
     }
 
