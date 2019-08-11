@@ -28,7 +28,7 @@ nav {
         transform: translateY(-100%);
     }
 }
- 
+
 
 .sidenav {
     width: 200px;
@@ -93,6 +93,7 @@ nav {
         font-size: 40px;
         text-transform: uppercase;
     }
+
     .intro {
         font-size: 1.4rem;
         font-weight: 700;
@@ -108,23 +109,25 @@ nav {
         .heading {
             font-weight: 700;
         }
-    
-        .price {
-            display: block;
-            max-width: 250px;
-            padding: 7px 0;
-            margin: 10px auto 20px auto;
-            background-color: #424242;
-            color: white;
-            text-align: center;
-        }
 
-        ul.offer li{
+        ul.offer li {
             list-style-type: disc;
             padding: 5px 0;
+
+            .ask-more {
+                display: block;
+                max-width: 250px;
+                padding: 7px 0;
+                margin: 30px auto 0 auto;
+                background-color: #424242;
+                color: white;
+                text-align: center;
+            }
         }
+
+
     }
-    
+
 
     .offer-desktop {
         display: none;
@@ -141,6 +144,7 @@ nav {
                 display: flex;
                 justify-content: center;
                 align-items: center;
+
                 a {
                     color: #000;
                     font-weight: 700;
@@ -160,7 +164,7 @@ nav {
 
         #business {
             margin: 50px 0;
-            
+
             div {
                 display: flex;
 
@@ -169,10 +173,10 @@ nav {
                     opacity: .8;
                     text-align: left;
                 }
-    
-                ul.offer{
+
+                ul.offer {
                     list-style-type: disc;
-    
+
                     li {
                         display: list-item;
                         font-size: 1.2rem;
@@ -185,7 +189,7 @@ nav {
 
         #education {
             text-align: center;
-            
+
             i {
                 display: block;
                 font-size: 150px;
@@ -202,8 +206,8 @@ nav {
 
             i {
                 font-size: 100px;
-                opacity: .8;    
-                
+                opacity: .8;
+
             }
 
             img {
@@ -218,7 +222,7 @@ nav {
                 display: block;
                 text-align: center;
             }
-        
+
             .price {
                 display: block;
                 max-width: 250px;
@@ -306,7 +310,7 @@ div#form-alert {
 
 footer {
     min-height: 60px;
-    background-color: rgba(0,0,0,0.87);
+    background-color: rgba(0, 0, 0, 0.87);
 
     p {
         width: 100%;
@@ -338,7 +342,7 @@ footer {
     h4 {
         width: 100%;
         text-align: center;
-        font-family: 'Lilita One', 'Roboto', sans-serif; 
+        font-family: 'Lilita One', 'Roboto', sans-serif;
     }
 
     .modal-footer {
@@ -346,20 +350,20 @@ footer {
     }
 }
 
-@media screen and (orientation: landscape){
+@media screen and (orientation: landscape) {
     #header {
         background-image: url(../img/header_landscape_1366.jpg);
     }
 }
 
-@media screen and (min-width: 576px) and (orientation: portrait){
+@media screen and (min-width: 576px) and (orientation: portrait) {
     #header {
         background-image: url(../img/header_portrait_1024.jpg);
 
-        h1{
+        h1 {
             font-size: 80px;
         }
-        
+
     }
 }
 
@@ -374,7 +378,7 @@ footer {
         .offer-mobile {
             display: none;
         }
-    
+
         .offer-desktop {
             display: block;
         }
@@ -385,10 +389,10 @@ footer {
         margin: 0 auto;
     }
 
-    
+
 }
 
-@media screen and (min-width: 1367px) and (orientation: landscape){
+@media screen and (min-width: 1367px) and (orientation: landscape) {
     #header {
         background-image: url(../img/header_landscape_1920.jpg)
     }
